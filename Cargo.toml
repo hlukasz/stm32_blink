@@ -1,0 +1,26 @@
+[package]
+name = "stm32_blink"
+version = "0.1.0"
+authors = ["Łukasz Hawryłko <lukasz-h@wp.pl>"]
+edition = "2018"
+
+[profile.release]
+# optimize for size ('z' would optimize even more)
+opt-level = 's'
+# link with link time optimization (lto).
+lto = true
+# enable debugging in release mode.
+debug = true
+
+[dependencies]
+stm32l0xx-hal = {version = "0.4.0", features = ["stm32l0x3", "rt"]}
+cortex-m-rt = "0.6.10"
+# provides access to low level ARM CPU registers (used for delay)
+cortex-m = "0.6.1"
+# provies a panic-handler (halting cpu)
+# (required when not using stdlib)
+#panic-halt = "0.2.0"
+panic-semihosting = "0.5.3"
+cortex-m-semihosting = "0.3.5"
+embedded-hal = "0.2.3"
+shared-bus = {version = "0.1.4", features = ["cortexm"]}
