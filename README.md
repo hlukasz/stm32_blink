@@ -1,6 +1,6 @@
 # Example project for STM32 in Rust Embedded
 
-This is a very simple demo that can be used as a template for new projects. It configures I2C and UART to read a preasure from I2C sensor and print value via UART. When build with debug configuration it also uses semihosting. It should work with minor changes in all STM32L0 devices and with a few more changes on other microcontrollers.
+This is a very simple demo that can be used as a template for new projects. It configures I2C and UART to read a preasure from I2C sensor and print the value via UART. When build with debug configuration it also uses semihosting. It should work with minor changes in all STM32L0 devices and with a few more changes on other microcontrollers.
 
 In first step remember to select proper STM32L0 family for stm32l0xx-hal in `Cargo.toml` and ensure that `memory.x` reflects your device memory configuration.
 
